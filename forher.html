@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Favorite madhu 💕</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .cursive {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 24px;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff80ab;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .photo-slot {
+            aspect-ratio: 1/1;
+            background: #eee;
+            border: 4px dashed #ff80ab;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .photo-slot:hover {
+            transform: scale(1.02);
+            border-style: solid;
+        }
+
+        #message-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Background Decoration -->
+    <div id="heart-container" class="fixed inset-0 pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto space-y-8">
+        
+        <!-- Header Section -->
+        <header class="text-center py-10 glass p-6 floating">
+            <h1 class="text-4xl md:text-6xl text-pink-600 cursive mb-4">I'm So Sorry my mandbadak!!! 🥺🌸</h1>
+            <p class="text-gray-700 text-lg italic">"If being cute was a crime, you'd be serving a life sentence."</p>
+        </header>
+
+        <!-- The Apology Section -->
+        <section class="glass p-8 shadow-xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 text-4xl opacity-20">🥺</div>
+            <h2 class="text-2xl font-bold text-pink-500 mb-4 uppercase tracking-widest"> "I'm Sorry my babyy!!" </h2>
+            <div class="space-y-4 text-gray-800 leading-relaxed">
+                <p>hey madhu💕 mazz ball ❤️ my dear snowwhite💋, my dear nakhrebazz 😍. I know that iam idiot but actually I am only idiot for you , right now i don't know what I am doing but I know that this time your so angry on mee and I also know that you will forgive me and please don't angry on me again 😭.  Please forgive your favorite idiot? 🍫</p>
+            </div>
+        </section>
+
+        <!-- Appreciation / Flirting Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass p-6 flex flex-col items-center justify-center text-center">
+                <h3 class="text-xl font-bold text-purple-600 mb-2">Why you're annoying...</h3>
+                <p class="text-sm text-gray-600 italic">Because you're so pretty it's actually distracting. How am I supposed to focus on my life when your face exists?</p>
+                <button onclick="spawnHearts()" class="mt-4 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition">Click for a truth bomb</button>
+            </div>
+            
+            <div class="glass p-6">
+                <h3 class="text-xl font-bold text-pink-600 mb-2">The "Bestie" Level</h3>
+                <p class="text-gray-700">I love you so badly it hurts sometimes (in a totally cool, non-creepy best friend way, obviously). You're the person I want to tell everything to. Without you, I'm basically a phone with 1% battery and no charger. 🔋</p>
+            </div>
+        </section>
+
+        <!-- Photo Appreciation -->
+        <section class="glass p-8">
+            <h2 class="text-2xl text-center cursive text-pink-600 mb-8">A Gallery of My Nakhrewalli!!</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Placeholder for Her Cuteness (Generated Placeholder Image) -->
+                <div class="rounded-xl overflow-hidden shadow-lg transform -rotate-2 hover:rotate-0 transition duration-500">
+                    <img src="her.jpeg" 
+                         alt="Cuteness" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='her.jpeg'">
+                    <div class="bg-white p-2 text-center text-xs font-bold text-pink-500 italic">Look at this masterpiece! ✨</div>
+                </div>
+
+
+            <div class="mt-8 text-center">
+                <p class="text-gray-600 italic">"I could look at you all day and still find new reasons why you're the prettiest person I know.
+"</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-10 opacity-70">
+            <p class="cursive text-2xl text-pink-500">I love you, Always. ❤️</p>
+            <button onclick="forgiveMe()" class="mt-4 text-xs underline text-gray-500 hover:text-pink-500">Click here to officially forgive me</button>
+        </footer>
+    </div>
+
+    <!-- Custom Message Box -->
+    <div id="message-box" class="glass p-8 shadow-2xl text-center w-80">
+        <h3 class="text-2xl font-bold text-pink-600 mb-4">Yay! 🎉</h3>
+        <p class="text-gray-700 mb-6">You've made me the happiest person alive. Let's never fight again, okay? You're too cute for drama.</p>
+        <button onclick="closeMessage()" class="bg-pink-500 text-white px-8 py-2 rounded-full">thank you for forgiving me my baby!!! 💋</button>
+    </div>
+
+    <script>
+        function spawnHearts() {
+            const container = document.getElementById('heart-container');
+            const icons = ['❤️', '💖', '✨', '🍭', '🌸'];
+            
+            for(let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.top = '-5vh';
+                    heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                    heart.style.duration = (Math.random() * 3 + 2) + 's';
+                    heart.style.opacity = Math.random();
+                    
+                    container.appendChild(heart);
+                    
+                    heart.animate([
+                        { transform: `translateY(0) rotate(0deg)`, opacity: 1 },
+                        { transform: `translateY(105vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                    ], {
+                        duration: Math.random() * 3000 + 2000,
+                        easing: 'linear'
+                    });
+
+                    setTimeout(() => heart.remove(), 5000);
+                }, i * 100);
+            }
+            
+            // Flirty truth bomb
+            const truths = [
+                "I'm 100% sure you're a real-life angel.",
+                "How do you look that much pretty even when you're mad at me?",
+                "I'd share my last try with you. That's true love.",
+                "if you were a vegetable,you'd be a cute cumber.",
+
+            ];
+            alert(truths[Math.floor(Math.random() * truths.length)]);
+        }
+
+        function forgiveMe() {
+            document.getElementById('message-box').style.display = 'block';
+            spawnHearts();
+        }
+
+        function closeMessage() {
+            document.getElementById('message-box').style.display = 'none';
+        }
+        
+        // Initial setup for the placeholder "cuteness" photo
+        window.onload = () => {
+            console.log("App loaded for the bestie!");
+        };
+    </script>
+</body>
+</html>
