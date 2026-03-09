@@ -1,2 +1,0 @@
-# oma
-for her❤️
